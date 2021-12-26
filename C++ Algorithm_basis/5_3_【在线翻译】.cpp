@@ -22,47 +22,62 @@
            loops
            
 *******************************************************************************/
-
-// 有几个报错 真不知道怎么解决了 ，cin 找不到！
-#include <cstdio>
-#include <cstring>
 #include <iostream>
+#include <cmath>
+#include <stdio.h>
 #include <algorithm>
-struct Entry{
-    char english[11];
-    char foreign[11];
-}entries[100005];
+#include <string.h>
+using namespace std;
 
-
-// 自定义的cmp函数
-int Cmp(Entry entry1,Entry entry2){
-    return strcmp(entry1.foreign,entry2.foreign)<0;
+struct Entry
+{
+    char ENG[11];//English
+    char FOG[11];//外语Foreign
+}entry1[100005];
+int Cmp(Entry a,Entry b)
+{
+    return strcmp(a.FOG,b.FOG)<0;
 }
 
-int main(){
-    int num = 0;
-    char word[11];
-    while(true){
-        scanf("%s %s",entries[num].english,entries[num].foreign);
-        num++;
-        cin.get();
-        if(cin.peek()== '\n')break;
-    }
-    sort(entries,entries+num,Cmp);
-    while(scanf("%s",word)!= EOF){
-        int left = 0 ,right = num - 1;
-        int n = 0;
-        while(left <= right){
-            int mid = left + (right - left)/2;
-            n = strcmp(entries[mid].foreign,word);
-            if(n < 0 )left = mid + 1;
-            else if(n > 0)right = mid - 1;
-            else {
-                printf("%s\n",entries[mid].english);
-                break;
-            }
+void binarySearch(Entry entry1[100005],int n,char word[])
+{
+    int mid,L=0,R=n-1;
+    int f=0;
+    while(R>=L)
+    {
+        mid=L+(R-L)/2;
+        f=strcmp(entry1[mid].FOG,word);
+        if(f<0)
+            L=mid+1;
+        else if(f>0)
+            R=mid-1;
+        else if(f==0)
+        {
+            printf("%s\n",entry1[mid].ENG);
+            break;
         }
-        if(n)printf("eh\n");
     }
-    return 0;
+         if(f!=0) printf("eh\n");
+}
+
+
+int main()
+{
+    //freopen("Text.txt","r",stdin);
+   int n=0;
+   while(1)
+   {
+       scanf("%s%s",entry1[n].ENG,entry1[n].FOG);
+       n++;
+       cin.get();
+       if(cin.peek()=='\n') break;
+   }
+   sort(entry1,entry1+n,Cmp);
+   char word[11];
+   while(~scanf("%s",word))
+   {
+       binarySearch(entry1,n,word);
+
+   }
+   return 0;
 }
