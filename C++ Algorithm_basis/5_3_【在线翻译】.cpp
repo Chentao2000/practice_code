@@ -22,11 +22,12 @@
            loops
            
 *******************************************************************************/
-#include <cstdio.h>
+
+// 有几个报错 真不知道怎么解决了 ，cin 找不到！
+#include <cstdio>
 #include <cstring>
 #include <iostream>
 #include <algorithm>
-
 struct Entry{
     char english[11];
     char foreign[11];
@@ -43,7 +44,7 @@ int main(){
     char word[11];
     while(true){
         scanf("%s %s",entries[num].english,entries[num].foreign);
-        num ++;
+        num++;
         cin.get();
         if(cin.peek()== '\n')break;
     }
@@ -53,8 +54,15 @@ int main(){
         int n = 0;
         while(left <= right){
             int mid = left + (right - left)/2;
-            n = strcmp
+            n = strcmp(entries[mid].foreign,word);
+            if(n < 0 )left = mid + 1;
+            else if(n > 0)right = mid - 1;
+            else {
+                printf("%s\n",entries[mid].english);
+                break;
+            }
         }
+        if(n)printf("eh\n");
     }
+    return 0;
 }
-
