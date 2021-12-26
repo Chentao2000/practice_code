@@ -46,4 +46,38 @@
         那种手段或经过哪条路径演变到当前若干个状态无关
 *******************************************************************************/
 
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+#define MAX_SUM 100
+int d[MAX_SUM + 10][MAX_SUM + 10];
+int N;
+int MaxSum(int r, int j){
+    if(r == N)
+        return d[r][j];
+    
+    int sum1 = MaxSum(r+1,j);
+    int sum2 = MaxSum(r+1,j+1);
+    if(sum1 > sum2)
+        return sum1 + d[r][j];
+    return sum2 + d[r][j];
+}
+
+
+int main(){
+    int m ;
+    scanf("%d",&N);
+    for (int i = 1; i <= N; i++) 
+        for (int j = 1; j <= i; j++) 
+            scanf("%d", &d[i][j]);
+            
+        printf("%d",MaxSum(1,1));
+        return 0;
+}
+
+
+
+
+
 
