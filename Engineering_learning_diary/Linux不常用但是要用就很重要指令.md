@@ -5,4 +5,7 @@
 
   dpkg -i xxx(文件名)
   
+  sudo dpkg -i deb
+  
 ```
+
