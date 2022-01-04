@@ -1,0 +1,7 @@
+So, what exactly is a histogram? A histogram represents
+the distribution of pixel intensities (whether color or gray-
+scale) in an image. It can be visualized as a graph (or plot)
+that gives a high-level intuition of the intensity (pixel value)
+distribution. We are going to assume an RGB color space in
+this example, so these pixel values will be in the range of 0
+to 255.
