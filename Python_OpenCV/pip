@@ -8,7 +8,7 @@ python3 -m pip install xxx -i http://pypi.douban.com/simple/ --trusted-host pypi
 
 格式：pip install --target=目标路径  工具包名字
 
-pip install --target=/.local/lib/python3.6/site-packages keras_utilities
+pip install --target=/.local/lib/python3.6/site-packages xxx
 
 
 python3 模块安装的路径  ~/.local/lib/python3.6/site-packages
