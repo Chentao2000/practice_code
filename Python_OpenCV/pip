@@ -8,4 +8,4 @@ python3 -m pip install xxx -i http://pypi.douban.com/simple/ --trusted-host pypi
 
 格式：pip install --target=目标路径  工具包名字
 
-pip install --target=/home/wen/anaconda2/lib/python2.7/site-packages keras_utilities
+pip install --target=/home/xxx/anaconda2/lib/python2.7/site-packages keras_utilities
