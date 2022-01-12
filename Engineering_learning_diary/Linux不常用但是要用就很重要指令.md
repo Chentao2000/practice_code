@@ -8,4 +8,9 @@
   sudo dpkg -i deb
   
 ```
-
+2. python 修改默认值
+ 
+ gedit .bashrc
+alias python='/usr/bin/python3.6'
+ . ~/.bashrc  
+ 
