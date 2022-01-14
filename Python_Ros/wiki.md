@@ -1,1 +1,0 @@
-简单学习以下python在ros的编程，为Tello 项目打下基础
