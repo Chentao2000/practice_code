@@ -1,0 +1,40 @@
+#这个是我创建功能包的时候建立的 我把无关的 （  # 注释掉的删掉 里面的#内容除外 ）
+#这个是在src 时候输入的  目的是为了创建功能包 ：返回了
+catkin_create_pkg learning_topic roscpp rospy std_msgs geometry_msgs turtlesim
+返回了四个文件的其中一个
+Created file learning_topic/package.xml
+Created file learning_topic/CMakeLists.txt
+Created folder learning_topic/include/learning_topic
+Created folder learning_topic/src
+
+#--------------------------------------------------------------------------------
+cmake_minimum_required(VERSION 3.0.2)
+project(learning_topic) #Tao 这个是功能名
+
+find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
+  roscpp
+  rospy
+  std_msgs
+  turtlesim
+)
+# 这个是功能包 把五个功能包列进去了
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES learning_topic
+#  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs turtlesim
+#  DEPENDS system_lib
+)
+# -- 这上面什么也没有，但其实包含了我创建的功能包
+
+
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS}
+)
+# 这个是编译指令 这个执行才会执行
+
+
+
+
+
