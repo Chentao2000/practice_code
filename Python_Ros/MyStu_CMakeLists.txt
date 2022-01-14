@@ -34,7 +34,10 @@ include_directories(
 )
 # 这个是编译指令 这个执行才会执行
 
-
-
+# ------------------------ 新加的 ，编译代码--------------------------------
+# 设置编译的代码和可执行的文件 velocaity_publisher.cpp 就是你的代码
+add_executable(velocaity_publisher src /velocaity_publisher.cpp)
+#  设置链接库
+target_link_libraries(velocaity_publisher ${catkin_INCLUDE_DIRS})
 
 
