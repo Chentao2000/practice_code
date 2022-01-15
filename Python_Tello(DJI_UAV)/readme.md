@@ -17,10 +17,7 @@ catkin_create_pkg ocar_tello roscpp rospy sensor_msgs std_msgs
     """Wrapper class to interact with the Tello drone."""
     def __init__(self, local_ip, local_port, imperial=False, command_timeout=.3, tello_ip='192.168.10.1',
                  tello_port=8889):
- echo "source (Path To YourWorkSpace)/devel/setup.bash" >> ~/.bashrc
- source ~/.bashrc
- ```
-```
+                 
 绑定到本地IP/端口并将Tello置于命令模式。
 param local_ip（str）：要绑定的本地ip地址。
 param local_port（int）：要绑定的本地端口。
@@ -29,4 +26,11 @@ param imperial（bool）：如果为真，则速度为英里/小时，距离为�
 param command|u timeout（int | float）：等待命令响应的秒数。
 param tello_ip（str）：tello ip。
 param tello_port（int）：tello端口。
+```
+----
+配置环境变量
+ ```
+ source ~/.bashrc
+ echo "source (Path To YourWorkSpace)/devel/setup.bash" >> ~/.bashrc
+
 ```
