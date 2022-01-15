@@ -7,6 +7,7 @@ try/except语句用来检测try语句块中的错误，从而让except语句捕�
 
 以下为简单的try....except...else的语法：
 
+```python
 try:
   <语句>        #运行别的代码
 except <名字>：
@@ -15,5 +16,7 @@ except <名字>，<数据>:
   <语句>        #如果引发了'name'异常，获得附加的数据
 else:
   <语句>        #如果没有异常发生
+```
+
 
 
