@@ -117,4 +117,40 @@ if __name__ == '__main__'
 
 
     
+----
+### ROS话题消息
+~~- 躲不掉的 整本 ROS21 讲都要熟练使用~~  
 
+自定义话题消息 ： 话题是消息的类
+名称 `xxx.msg`
+
+```bash
+字符类型 命名
+string name
+uint8 sex
+uint8 age
+
+uint8 unknown = 0
+uint8 male = 1
+uint8 female = 2
+
+```
+初始化消息 :
+
+```bash
+person_msg = Person()
+person_msg.name =  "Tom";
+ person_msg.age  = "18";
+ person_msg.sex   = Person.male;
+```
+
+发布消息：
+
+首先创建一个发布者的topic ，消息类型为learning_topic:: `person`
+
+```bash
+person_info_pub.publish(person_msg)
+发布者.publish（发布）
+```
+
+ 
