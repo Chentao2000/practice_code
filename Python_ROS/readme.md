@@ -5,6 +5,7 @@
  3. python文件名字也可以用tab补全
  4. 在msg消息定义 中 是以分号作为结尾的 ，但是这在python会显示报错，但实际是可以通过 比如：        persion_msg.name = 18;
 5. 加入环境变量 
+6. msg 中不能用tab !!
 
 -----
 #### Python_Ros  要记住的指令
