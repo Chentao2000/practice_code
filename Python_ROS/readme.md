@@ -7,6 +7,7 @@
  4. 在msg消息定义 中 是以分号作为结尾的 ，但是这在python会显示报错，但实际是可以通过 比如：        persion_msg.name = 18;
 5. 加入环境变量 
 6. msg 中不能用tab !!
+7. 引入自定义好的话题消息时候，form 节点.msg  import 消息名称 ，而不是 form 消息名称.msg （虽然你消息名称是 消息名称.msg） ！！！
 
 -----
 #### Python_Ros  要记住的指令
