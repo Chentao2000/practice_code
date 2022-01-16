@@ -135,7 +135,7 @@ uint8 male = 1
 uint8 female = 2
 
 ```
-初始化消息 :
+##### 初始化消息 :
 
 ```bash
 person_msg = Person()
@@ -144,13 +144,35 @@ person_msg.name =  "Tom";
  person_msg.sex   = Person.male;
 ```
 
-发布消息：
+#####  发布消息：
 
-首先创建一个发布者的topic ，消息类型为learning_topic:: `person`
+首先创建一个发布者的topic ，消息类型为
+learning_topic:: `person`
 
 ```bash
 person_info_pub.publish(person_msg)
-发布者.publish（发布）
+发布者.publish（发布消息内容）
 ```
 
- 
+ #####  接收消息：
+创建回调函数（回调函在`订阅者`中经常使用 ，就是把你要订阅的消息通通写在一个函数里 然后在subscriber 函数 （,, xxxx）xxx写入你的回调函数
+
+###### -  回调函数
+
+```bash
+def  personiNfoCalback(msg):
+  rospy.loginfo("subscribe  xxx info : xxx: %s,		 xxx: %s ", xxx , xxx)
+```
+###### -  创建订阅者 订阅这个话题
+
+```bash
+rospy.Subscriber( " /订阅名 "，话题，回调函数) 
+```
+
+
+
+### 客户端
+
+客户端可以理解向主服务器发送指令
+
+de
