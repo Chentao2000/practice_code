@@ -1,4 +1,5 @@
 
+
  1. C++ 是放在了 功能包的 src 文件里，需要编译 更改（CMakeLists.txt），但是如果是python文件，就放在scripts文件里 
  2. （自己新建一个 scripts 放进去 然后给文件 权限 ： 允许程序作为执行权限 ）直接编译然后 rosrun 节点 文件 就好了
  3. python文件名字也可以用tab补全
@@ -196,6 +197,132 @@ except rospy.ServiceException ,e:
 创建 服务 Server 实例， 循环等待服务请求， 进入回调函数 
 在回调函数中完成服务功能的处理 ，并反馈应答数据 
 
+1. 创建命令行线程：
+```bash
+def command_thread():
+		while 判断条件（）：
+			if pubCommand：
+					vel_msg = Twist() #从Twist这个msg调用这个消息
+					vel_msg .linear.x =0.5
+					vel.msg.linear.y = 0.2 
+					turtle_vel_pub.publish( 发布消息 vel_msg)
+			time.sleep(0.1)
+```
+
+
+2. 创建命令行 回调函数：
+
+```bash
+def comandCalllback(req):
+	  gloal xxx   // 声明变量
+# 显示请求数据
+		rospy.loginfo("xxxx %d",xxx)   // 答应出来
+# 反馈数据
+		return TriggerResponse(1,"Change turtle command state !") #反馈数据
+	  
+```
+
+3. 创建turtle命令行服务器：
+
+```bash
+def turtle_command_server():
+		# ROS节点初始化：
+		rospy.init_node("xxx ") # xxx 是节点的名字
+		# 创建一个 / xxx 的 服务 ，注册回调函数 commandCallback
+		s = rospy.server('/turtle_command',Trigger,commandcallback)
+	# 循环等待回调函数 ：
+		print "Read to receive turtle_server"
+
+```
+4.  线程开启
+
+```bash
+ thread.start_new_thread(command_thread,())
+```
+---- 
+### 参数的使用和方法 rosparam
+参数模型 是一个全局字典
+##### 参数命令
+列出当前多个参数
+```bash
+rosparam list
+```
+显示某个参数值:
+```bash
+rosparam get /xxx # paramkey
+```
+设置某个参数值
+
+```bash
+ rosparam set xxx  xxx # paramkey paramvalue
+```
+保存参数到文件 
+
+```bash
+ rosparam dupm xxx # flie_name
+```
+
+从文件中读取参数
+```bash
+ rosparam load xxx # flie_name
+```
+删除参数
+```bash
+ rosparam delete xxx # param_key
+```
+
+##### 获取和设置参数：
+
+1. 初始化一个ROS节点：
+ 
+
+```bash
+rospy.init_node('xxx', anoymous =True)
+```
+2.  get 函数 获取参数  set 函数设置参数
+
+```bash
+def xxx () 主函数
+ # 获取参数
+  xxx  = rospy.get_param('')
+  xxx =  rospy.set_param('')
+ #  打印出来你获取参数
+ rospy.logifo( " %d %d ",xxx xxx)
+ 
+# 设置参数
+  xxx = ros.set_param(" ")
+  xxx = ros.set_param(" ")
+ #  建议你设置出来打印参数
+ rospy.logifo( " %d %d ",xxx xxx)
+# 再获取一遍 确保你获取成功了
+  xxx  = rospy.get_param('')
+  xxx =  rospy.set_param('')
+ #  打印出来你获取参数
+ rospy.logifo( " %d %d ",xxx xxx)
+```
+
+3.  使用try excerpt 函数 确保你连接服务成功
+
+```bash
+# 首先 发现服务 ，创建一个服务客户端. 连接的 xxx 的 服务
+rospy.wait_for_serive ('/clear')
+try :
+		clear_background = rospy.ServiceProxy('/clear',empty)
+		# ↑ ↓清除一下原先的数据！ 不清除 没法用
+		response = clear_background()
+		return response
+except  rospy.ServiceExcepct ,e :
+		print " 服务请求失败"
+```
+
+4 . 主函数发布程序
+
+```bash
+xxxx main xxx
+ 		xxx () 主函数
+
+```
 
 
 
+-----
