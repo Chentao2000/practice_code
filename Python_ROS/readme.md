@@ -15,7 +15,7 @@
         self.con_thread = threading.Thread(xxxx = xxxx)
         self.con_thread.start()
 ```
-
+11. 文件名和类名不要重叠 ，会找不到定义的
 -----
 #### Python_Ros  要记住的指令
 ###### 通用指令
