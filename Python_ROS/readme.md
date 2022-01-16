@@ -171,8 +171,31 @@ rospy.Subscriber( " /订阅名 "，话题，回调函数)
 
 
 
-### 客户端
+### 客户端 Client
+- 客户端应该是与服务端相对的 ，服务端提供服务，客户端根据提供的服务发送指令
 
-客户端可以理解向主服务器发送指令
+发现服务 / 创建一个服务客户端 ，链接 /spawm service
 
-de
+```bash
+rospy.wait_for_service("/spawn")
+```
+用try excepct 来检测服务是否连接成功：
+
+```bash
+try:
+    add_tutrle  = rospy.ServiceProxy('/spawn',spawn)
+    # 请求服务调用 ，输入请求数据
+    response = add_tutrle(2.0,2.0,2.0,"tutrle2")
+    return response.name
+
+except rospy.ServiceException ,e:
+    print " Service calll fialed %s " %e
+```
+
+### 服务器 Server
+创建 服务 Server 实例， 循环等待服务请求， 进入回调函数 
+在回调函数中完成服务功能的处理 ，并反馈应答数据 
+
+
+
+
