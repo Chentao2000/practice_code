@@ -1,5 +1,6 @@
 
 
+
  1. C++ 是放在了 功能包的 src 文件里，需要编译 更改（CMakeLists.txt），但是如果是python文件，就放在scripts文件里 
  2. （自己新建一个 scripts 放进去 然后给文件 权限 ： 允许程序作为执行权限 ）直接编译然后 rosrun 节点 文件 就好了
  3. python文件名字也可以用tab补全
@@ -122,6 +123,43 @@ if __name__ == '__main__'
 ----
 ### ROS话题消息
 ~~- 躲不掉的 整本 ROS21 讲都要熟练使用~~  
+
+`编译消息的步骤：`
+
+1. 打开 package.xml 添加依赖 （添加到最下面）
+
+```bash
+<build_depend>message_generation</build_depend>
+<exec_depend>message_runtime</exec_depend>
+```
+
+2.  在CMakelist 添加编译依赖项:
+
+在功能包里添加  message_generation
+
+```bash
+find_package( ...... message_generation)  
+```
+
+找到注释 找到你要添加的 msg 
+
+```bash
+add_message_files(
+FILES 
+xxx.msg )
+generate_messages(
+DEPENDENCIES
+ std_msgs)
+catkin_msg
+ 
+```
+
+然后在catkin package 里直接去掉注释 ，加入 message_runtime 
+
+```bash
+catkin_package(...... message_runtime)
+```
+
 
 自定义话题消息 ： 话题是消息的类
 名称 `xxx.msg`
