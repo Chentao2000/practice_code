@@ -9,6 +9,12 @@
 6. msg 中不能用tab !!
 7. 引入自定义好的话题消息时候，form 节点.msg  import 消息名称 ，而不是 form 消息名称.msg （虽然你消息名称是 消息名称.msg） ！！！
 8. 一个python文件只能初始化 一个节点 
+9. 定义一个变量之前也要先使用 glabal 申明一下变量，不要不明不白就去使用了，虽然python 可以直接 = 不会报错
+10. 线程的使用方法：
+```python
+        self.con_thread = threading.Thread(xxxx = xxxx)
+        self.con_thread.start()
+```
 
 -----
 #### Python_Ros  要记住的指令
