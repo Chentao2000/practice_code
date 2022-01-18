@@ -17,6 +17,20 @@
 ```
 11. 文件名和类名不要重叠 ，会找不到定义的
 12. 节点只初始化一次 ，但是话题消息却是一直在发布
+
+-------------------------------
+13. C++  和 Python 代码的转换：
+
+ROS中 Python 没有句柄的 ，python 赋值时候就本身就是句柄了 C++ 要新建一个 句柄
+
+还有就是 C++ 中初始化一个msg 要  这样子
+```bash
+void xxx(const geometry_msgs::PoseStamped::ConstPtr &msg)
+```
+而 python 只要
+```bash
+def xxx(msg):
+```
 -----
 #### Python_Ros  要记住的指令
 ###### 通用指令
