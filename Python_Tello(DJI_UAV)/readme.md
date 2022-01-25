@@ -1,5 +1,6 @@
 端口被以及占用怎么办：
-
+-学习网址 ：https://github.com/murtazahassan/Tello-Object-Tracking
+- 教学视频 ： https://www.bilibili.com/video/BV11X4y1N7cQ?spm_id_from=333.999.0.0
 lsof -i :8000
 
 
