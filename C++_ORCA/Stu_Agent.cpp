@@ -126,6 +126,36 @@ namespace RVO
 
             Line line;
             // 这是一个新的类
+            if ( s < 0.0f && distSq1 <=  radiusSq){
+                /* Collision with left vertex. Ignore if non-convex. */
+                if ( obstacle1 -> isConvex_){
+            line.point = Vector2(0.0f,0.0f);
+			line.direction = normalize(Vector2(-relativePosition1.y(), relativePosition1.x()));
+            orcaLines_.push_back(line);
+            }
+            continue;
+            
+            else if (s > 1.0f && distSq2 <= radiusSq){
+				/* Collision with right vertex. Ignore if non-convex 
+				 * or if it will be taken care of by neighoring obstace 
+                 学英文了哈 ：
+                 Collision : 碰撞    Vertex ： 顶点 角点 至高点  non-comvex 非高点
+                 neigoring 临近的   obstacle 障碍物
+                 */
+                	if (obstacle2->isConvex_ && det(relativePosition2, obstacle2->unitDir_) >= 0.0f) {
+					line.point = Vector2(0.0f, 0.0f);
+					line.direction = normalize(Vector2(-relativePosition2.y(), relativePosition2.x()));
+					orcaLines_.push_back(line);
+            }
+            continue ;
+			else if (s >= 0.0f && s < 1.0f && distSqLine <= radiusSq) {
+				/* Collision with obstacle segment. */
+				line.point = Vector2(0.0f, 0.0f);
+				line.direction = -obstacle1->unitDir_;
+				orcaLines_.push_back(line);
+				continue;
+			}
+            }
 
 
 } // namespace RVO
