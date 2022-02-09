@@ -32,7 +32,7 @@ print("wrap around: {}".format(np.uint8([50]) - np.uint8([100])))
 #然后将其乘以100，创建一个填充的数组
 #用100。然后我们简单地把图像加在一起。注意
 #怎么样这个图像将变亮
-M = np.ones(image.shape, dtype = "uint8") * 100
+M = np.ones(image.shape, dtype = "uint8") * 200
 ## 这句话的意思是 创建一个图像一样的参数 ；然后每个都是 1 ，让它乘以100 ，然后加起来
 ## 还好我记得 np.one 是怎么来的哈哈哈哈！！
 added = cv2.add(image, M)
@@ -41,7 +41,7 @@ added
 
 # 同样的 ，我们用相同的方法处设立
 #  图像将变得更暗
-M = np.ones(image.shape, dtype = "uint8") * 50
+M = np.ones(image.shape, dtype = "uint8") * 200
 subtracted = cv2.subtract(image, M)
 cv2.imshow("Subtracted", subtracted)
 cv2.waitKey(0)

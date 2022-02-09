@@ -5,9 +5,9 @@ from numpy.core.defchararray import center
 
 canvas = np.zeros((300, 300, 3), dtype = "uint8")
 
-
+# R G B ( R , G , B ) t = (B , G . R)
 #  5.2
-green = (0,255,0)
+green = (203,192,255)
 cv2.line(canvas,(0,0),(300,300),green)
 cv2.imshow("Canvas",canvas)
 
