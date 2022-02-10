@@ -23,9 +23,34 @@ Traceback (most recent call last):
 ImportError: No module named keras.models
 
  pip3 install --upgrade h5py
-
+ pip3 install keras==2.2.5
+ pip3 install tensorflow==1.14.0
+ 
 ---
+ 
+ Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
 
+pip3 install matplotlib
+ 
+ ----
+ 
+ 
+    from tensorflow.python.eager.context import get_config
+ImportError: cannot import name 'get_config'
+ 
+ keras tensorflow
+ 
+![图片](https://user-images.githubusercontent.com/68007558/153374359-de4cf57c-34a0-4e89-bca5-c239f1725ea5.png)
+
+ 
+ ----
+ 
+ 
+ 
+ ----
 ## Bug
 
 AttributeError: module 'glm' has no attribute 'vec3':
