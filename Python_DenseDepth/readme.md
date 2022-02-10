@@ -22,6 +22,7 @@ Traceback (most recent call last):
     from keras.models import load_model
 ImportError: No module named keras.models
 
+ pip3 install opencv-python
  pip3 install --upgrade h5py
  pip3 install keras==2.2.5
  pip3 install tensorflow==1.14.0
