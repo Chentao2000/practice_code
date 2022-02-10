@@ -38,6 +38,15 @@ pip3 install matplotlib
  
  ----
  
+       File "<string>", line 1, in <module>
+      File "/tmp/pip-build-a_5k7i47/opencv-python/setup.py", line 10, in <module>
+        import skbuild
+    ModuleNotFoundError: No module named 'skbuild'
+    
+pip3 install scikit-build
+
+ 
+ ----
  
     from tensorflow.python.eager.context import get_config
 ImportError: cannot import name 'get_config'
