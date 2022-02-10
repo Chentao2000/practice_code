@@ -58,8 +58,13 @@ ImportError: cannot import name 'get_config'
  
  ----
  
+ /home/yuki/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+
  
  
+ pip3 install -U numpy==1.16.4
+
  ----
 ## Bug
 
