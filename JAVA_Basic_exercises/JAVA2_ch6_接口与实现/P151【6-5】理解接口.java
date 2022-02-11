@@ -1,8 +1,5 @@
 /******************************************************************************
-
-
 6 -5 理解接口 为什么要用接口呢
-
 （1） 接口可以抽象出重要的行为标准，该行为标准用抽象方法来表示
  (2)  可以把实现接口的类的对象引用赋值 给接口变量 该接口变量可以调用该类实现的接口方法 
  即 体现 了接口的行为标准 给出具体行为 
@@ -13,20 +10,26 @@
  
  下面例子中 ： 要求 MotorVehicles 类 （机动车 ） 的子类 Taxi 和 Bus 必须要有名称 brake 方法（刹车功能）
  但额外要求Taxi 名字 拥有 ControlAirTemperature 和 charge 的方法 （即 实现Taxi 的两个接口 ）
- 要求客车类有名字为charge的方法 有收费功能.. 即要求Bus 只实现一个接口，运行效果 如图6.8 所示
-
+ 要求客车类有名字为charge的方法 有收费功能.. 即要求Bus 只实现一个接口，运行效果 如下
+ 
+ brake ： 刹车 
+ charge ： 要价
+ fare ： 票价
+ 
+ 
+ 
 *******************************************************************************/
 abstract class MotorVehicles{
     abstract void brake();
 }
-interface MoneyFace{
+interface MoneyFare{
     void charge();
 }
 interface ControlTemperature{
     void ControlAirTemperature();    
 }
 
-class Bus extends MotorVehicles implements MoneyFace{
+class Bus extends MotorVehicles implements MoneyFare{
     void brake(){
         System.out.println("公交车使用毂式刹车技术");
     }
@@ -35,16 +38,19 @@ class Bus extends MotorVehicles implements MoneyFace{
     }
 }
 
-class Taxi extends MotorVehicles implements MoneyFace,ControlTemperature{
+class Taxi extends MotorVehicles implements MoneyFare,ControlTemperature{
     void brake(){
         System.out.println("出租车使用盘式刹车技术");
     }
     public void charge(){
-        System.out.println("出租车安装了 Hair 空调");
+        System.out.println("出租车 2元 /公里 起价 3公里 ");
+    }
+    public void ControlAirTemperature(){
+        System.out.println("出租车安装了Hair空调");
     }
 }
 
-class Cinema implements MoneyFace,ControlTemperature{
+class Cinema implements MoneyFare,ControlTemperature{
     public void charge(){
         System.out.println("电影院 : 门票 ： 10元一张");
     }
@@ -55,46 +61,31 @@ class Cinema implements MoneyFace,ControlTemperature{
 
 public class Main{
     public static void main (String[] args) {
+        
         Bus bus101 = new Bus();
         Taxi buleTaxi = new Taxi();
         Cinema redStarCineama = new Cinema();
-        MoneyFace fare;
+        
+        MoneyFare fare;
         ControlTemperature temperature;
         
         fare = bus101 ;
         bus101.brake();
         fare.charge();
-        fare = buleTaxi;
         
+        fare = buleTaxi;
         temperature = buleTaxi;
         buleTaxi.brake();
         fare.charge();
-        
         temperature.ControlAirTemperature();
+        
+        fare = redStarCineama;
+        temperature = redStarCineama;
         fare.charge();
         temperature.ControlAirTemperature();
     
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
