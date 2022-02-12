@@ -100,10 +100,15 @@ ModuleNotFoundError: No module named 'glm'
 This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
 
 Available platform plugins are: xcb, eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, webgl.
-
-
  
- sudo pip3 install pyqt5==5.12.0
+ 
+ 重装 QT  PYQT 以及其他组件 ??
+ 这个问题是个天坑，国内上的解决方法我都搜索过了 ，都运行过它们的方法 ，一切正常但还是报错 
+ 
+ 之前在笔记本好像碰到过，不过我不知道怎么就解决 了， 好像是直接安装了 qt还是pyqt.... 就可以了..
+ 但在实验室重装n回了都不行， 可能是安装方式不多 ，我在笔记那次好像是通过图形界面安装而非命令行安装的.....
+ 
+ 
 
 ----- 
  
