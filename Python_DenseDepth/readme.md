@@ -72,6 +72,10 @@ ImportError: cannot import name 'get_config'
  pip update ！
  
  -------
+ import skimage.transform ImportError: No module named 'skimage'
+ 
+ pip3 install scikit-image
+------
 ## Bug
 
 AttributeError: module 'glm' has no attribute 'vec3':
