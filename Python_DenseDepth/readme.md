@@ -66,6 +66,12 @@ ImportError: cannot import name 'get_config'
  pip3 install -U numpy==1.16.4
 
  ----
+ pip安装opencv时卡住：Running setup.py bdist_wheel for opencv-python … /
+ 
+ 
+ pip update ！
+ 
+ -------
 ## Bug
 
 AttributeError: module 'glm' has no attribute 'vec3':
