@@ -2,6 +2,13 @@ DenseDepth : https://github.com/ialhashim/DenseDepth
 
 ## INSTALL:
 
+安装思路 ： 克隆好代码之后，直接运行 他的的demo代码
+
+python3 demo.py
+
+然后报错啥就安啥，注意是python3 以及 pip3 ，注意一下各个版本 之间依赖关系 （要降低版本），
+我第一次是其实是安的很顺利（然后就没有第二次.....）
+ 
 ---
 
 install：NVIDIA devices 
