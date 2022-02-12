@@ -95,6 +95,15 @@ ensupport/__feature__.py", line 142, in _import
 ModuleNotFoundError: No module named 'glm'
 
  pip3 install PyGLM
+------
+ qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "/home/sysu/.local/lib/python3.6/site-packages/cv2/qt/plugins" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: xcb, eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, webgl.
+
+
+ 
+ sudo pip3 install pyqt5==5.12.0
 
 ----- 
  
