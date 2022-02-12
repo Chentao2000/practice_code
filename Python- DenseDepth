@@ -1,5 +1,8 @@
 DenseDepth： 
 
+
+    sudo apt install qt5dxcb-plugin
+
 ---
 
 install：NVIDIA devices 
