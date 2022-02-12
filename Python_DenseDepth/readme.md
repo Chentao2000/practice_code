@@ -75,7 +75,29 @@ ImportError: cannot import name 'get_config'
  import skimage.transform ImportError: No module named 'skimage'
  
  pip3 install scikit-image
+ 
+ -----
+     from PySide2 import QtCore, QtGui, QtWidgets, QtOpenGL
+ModuleNotFoundError: No module named 'PySide2'
+ 
+ pip3 install pyside2
+ 
 ------
+    return original_import(name, *args, **kwargs)
+ModuleNotFoundError: No module named 'OpenGL'
+
+pip3 install pyOpenGL
+
+-------
+
+ensupport/__feature__.py", line 142, in _import
+    return original_import(name, *args, **kwargs)
+ModuleNotFoundError: No module named 'glm'
+
+ pip3 install PyGLM
+
+----- 
+ 
 ## Bug
 
 AttributeError: module 'glm' has no attribute 'vec3':
