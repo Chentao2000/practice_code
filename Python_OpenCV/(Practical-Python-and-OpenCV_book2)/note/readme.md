@@ -8,7 +8,10 @@
 
 
 ### [ch2 ]Summary of unfamiliar words in the F A C E D E T E C T I O N chapter:
+
  -----------------------
+
+
 [proof ： 证明 ]  [dorm ：宿舍] [fired  shot ： 开枪 ]
 [ tumbling : 翻滚]  [ undergraduate: 大学生]
 [notation : 符号 ]
@@ -109,9 +112,15 @@ This classifier is serialized as an XML file
 [ company  陪伴 / 公司]
 [Figure 数字]  
 [ mentioning : 提及]
+
+
 ------
 
 #### [ch4]Summary of unfamiliar words in the OBJECTT RA CKINGINVIDE Ochapter:
+
+
+-----
+
 
 [mused : 沉思]
 [nursing : 护理 ]
@@ -153,6 +162,11 @@ This classifier is serialized as an XML file
 [ boundaries: 边界]
 
 #### [ch5]Summary of unfamiliar words in the EYET RACKING chapter:
+
+-----
+
+
+
 [ glass of  :  一杯 ]
 [ browsing : 浏览 ]
 [  posted :  已发布]
