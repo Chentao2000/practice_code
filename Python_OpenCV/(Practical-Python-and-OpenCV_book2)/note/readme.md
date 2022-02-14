@@ -109,13 +109,9 @@ This classifier is serialized as an XML file
 [ company  陪伴 / 公司]
 [Figure 数字]  
 [ mentioning : 提及]
-
-
 ------
 
 #### [ch4]Summary of unfamiliar words in the OBJECTT RA CKINGINVIDE Ochapter:
-
-------
 
 [mused : 沉思]
 [nursing : 护理 ]
@@ -156,7 +152,26 @@ This classifier is serialized as an XML file
 [determine :  决定]
 [ boundaries: 边界]
 
+#### [ch5]Summary of unfamiliar words in the EYET RACKING chapter:
+[ glass of  :  一杯 ]
+[ browsing : 浏览 ]
+[  posted :  已发布]
+[ apparently : 显然]
+[Ecstatic :  欣喜若狂]
+[cascade classifier :  级联分类器]
+[tune : 调]
+[accuracy : 准确性] 
+[extracts : ]
+[ coordinates : 坐标 ]
+[ generate : 产生 ]
+[variable : 多变的 ]
+[ tweak : 调整  ]
+[ instantiates :  ]
+[converts : 转换 ]
+[ corresponding : 相应的 ]
 
 
+python eyetracking.py --face cascades/haarcascade_frontalface_default.xml --eye cascades/haarcascade_eye.xml
 
 --------------------
+
