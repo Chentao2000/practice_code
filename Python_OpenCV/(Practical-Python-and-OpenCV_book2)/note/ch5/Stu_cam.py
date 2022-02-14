@@ -2,6 +2,7 @@
 # python cam.py --face cascades/haarcascade_frontalface_default.xml
 # python cam.py --face cascades/haarcascade_frontalface_default.xml --video video/adrian_face.mov
 
+# 这个其实应该是第2章节 .. 害 ，写错不管它的了
 
 # 嘤嘤嘤，从这节开始 即使我看的懂英文，我要写英文 为了学习英文  ,不只是简单照抄 ，起码过了两遍脑子了！
 # import the necessary packages
