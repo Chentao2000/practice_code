@@ -187,5 +187,73 @@ This classifier is serialized as an XML file
 
 python eyetracking.py --face cascades/haarcascade_frontalface_default.xml --eye cascades/haarcascade_eye.xml
 
+
+#### [ch5]HANDWRIT ING  RECOGNITIONWITH HOG chapter: 
+
+----- 
+
+solid oak  ： 实心橡木
+loud smack ： 响亮耳光?
+outburst : 爆发
+contract ： 合同 
+identify ：确认
+bled ： 流血
+
+upset ： 沮丧的 
+
+corner ： 角落
+mock : 嘲笑
+fundamentals： 基础只是
+penmanship : 书法
+graduate ： 毕业
+dropped ： 掉落 
+bride ： 新娘
+picket fence ： 栅栏
+lecturer ： 讲师
+descriptor ： 描述
+representing ： 代表
+classifying ： 分类
+scowl ：  皱眉头
+irony : 讽刺
+disgruntled ： 不满
+vandalism ： 故意破坏 
+relieving ： 缓解
+orientation ： 方向 
+histograms ： 直方图
+contrast ： 对比
+Support Vector Machine ： 支持向量机
+feature ：特征
+contains ： 包含
+extract ：提炼
+perhaps ： 也许
+utilize ： 利用
+constructor ： 构造函数 
+cellsPerBlock ： 每个块的单元格子 - Per Cells Block
+accuracy ： 准确性
+storing ： 存储
+literature ： 文学
+manipulate ：  操纵
+numerical ：  数字
+rotating : 旋转
+representation ： 展示
+deskew : 歪斜
+constructed 建造
+skewed ：  歪斜的
+direction ：方向 
+inter-polation ： 插值
+consistent ： 持续的 
+digits ： 数字
+extent  : 程度
+converts : 转换
+coordinates : 坐标
+integers : 整数
+LinearSVC ：线性服务
+
+
+
+
+
+
+
 --------------------
 
