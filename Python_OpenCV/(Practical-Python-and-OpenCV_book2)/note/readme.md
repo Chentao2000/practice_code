@@ -188,7 +188,7 @@ This classifier is serialized as an XML file
 python eyetracking.py --face cascades/haarcascade_frontalface_default.xml --eye cascades/haarcascade_eye.xml
 
 
-#### [ch5]HANDWRIT ING  RECOGNITIONWITH HOG chapter: 
+#### [ch6]HANDWRIT ING  RECOGNITIONWITH HOG chapter: 
 
 ----- 
 
@@ -256,6 +256,6 @@ LinearSVC ：线性服务
 
 
 --------------------
-#### [ch5] PLANT CLASSIF ICATION chapter: 
+#### [ch7] PLANT CLASSIF ICATION chapter: 
 
 
