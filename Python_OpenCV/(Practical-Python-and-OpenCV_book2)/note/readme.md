@@ -483,3 +483,25 @@ LinearSVC ：线性服务
 [ invariant : 不变的 ]
 [ descriptors : 描述性]
 [ snippet :片段] 
+[identification: 鉴别]
+[instantiated : 实例化]
+[CoverDescriptor  : 封面描述符]
+[query:询问 ]
+[invariant : 不变的  ]
+[descriptors : 描述符]
+[perform  : 执行]
+[ actual  实际的]
+[extracted  :  提取的]
+[ grabbed ：抓住  
+[ executes : 执行]
+
+
+attempts : 尝试
+corresponding ： 相应的
+identify :  确认
+identification
+
+```
+ python search.py --db books.csv --covers covers --query queries
+/query01.png
+```
