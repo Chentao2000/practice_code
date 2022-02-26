@@ -2,6 +2,13 @@
 
 https://github.com/d2l-ai/d2l-zh/blob/master/chapter_installation/index_origin.md
 
+## SKILS:
+
+source deactivate
+
+source activate
+
+
 ## BOOK:
 
 
