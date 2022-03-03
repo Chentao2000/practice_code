@@ -4,13 +4,13 @@ https://github.com/d2l-ai/d2l-zh/blob/master/chapter_installation/index_origin.m
 
 ## SKILS:
 
-注销虚拟环境：
+注销 conda 环境：
 
 source deactivate
 
-激活虚拟环境
+激活 conda 环境
 
-source activate
+source activate # 有可能会失效
 
 
 ## BOOK:
