@@ -307,12 +307,157 @@ package tom.jiafei
 #### 运行有包名的主类：
 
 ```
-C: \1000 > javac tom\jiafei\源文件
+C: \1000 > java tom\jiafei\主类名
 ```
 xxxx
 
 ### 源文件：
 
+1. 编译 
+
+```
+C: \1000 > javac tom\jiafei\源文件
+```
+2. 运行
+```
+C: \1000 > java tom\jiafei\源文件
+```
+
+
+### import 语句
+如果一个类想要使用的类和它不在同一个包呢，它怎么才能使用这样的类呢？
+这正是import 要解决的问题：
+
+### 引入 类库中的类：
+
+引入一个包中的全部类，则可以通过通配符号（*）来代替，列如：
+
+```
+import java.util.*;
+```
+表示引入java.util 包中所有的类，而
+
+```
+import java.util.Date;
+```
+
+##### 引入自定义包中的类：
+
+用户可以使用 import  引入非类库中有包名的类 ：
+
+```
+import tom.jiafei.*;
+```
+用户为了使他的程序能够 使用 tom.jiafei包中的类，可以在classpath 中指明 tom.jiafei包的位置
+假设tom.jiafei 位置是 C:\1000
+- 用户可以更新classpath的设置，例如在命令行执行如下命令
+```
+set classpath = E:\jdk1.8\jre\rt.jar;.;C:\1000
+```
+xxxx
+
+
+
+### 访问权限 ：
+- 当一个类创建对象那个 ，该对象可以通过 “ . ” 运算符操作自己的变量 ，使用类中的方法，但对象操作自己的变量和使用类中方法是有一定限制的
+
+#### 何谓访问权限：
+
+- 所谓访问权限，是指对象是否可以通过 “ . ”运算符操作自己的变量 或 通过 “ . ”运算符调用类中的方法。
+- 访问限制修饰符private 、protected 和public， 它们都是java关键字 ，用来修饰成员变量和方法
+
+- 注意！！ ： 在编写类的时候，类中的实例方法总是可以操作该类中的实例变量和类变量：类中的实例方法总是可以操作该类中实例变量和类变量；
+- 类方法总是可以操作该类中的类变量，与访问控制没有关系
+
+#### 私有变量和私有方法：
+
+ 用关键字private修饰的成员变量和方法称为 私有变量 和私有方法：
+ 当另一个类中类中用类Tom创建一个对象，该对象不能访问自己的私有变量，调用类中私有方法!
+ (就是说 ：私有方法的变量只能自己类用哦 ！)
+![私有变量](https://user-images.githubusercontent.com/68007558/156884663-19ca810b-c96c-43b6-859b-e76f28464728.jpg)
+
+
+
+
+#### 共有变量和共有方法：
+
+用 public 修饰的成员变量和方法被称为共有变量和共有方法：
+（ public 修饰的 ，不同类可以用哦 ！！ ）
+
+
+![共有变量](https://user-images.githubusercontent.com/68007558/156884781-30050b01-77d4-4595-b01f-e076451ceaa5.jpg)
+
+
+#### 友好变量和友好方法：
+ 不用public 、 private 、protected 修饰符修饰的成员变量和方法被称为，友好变量和友好 ！！
+ 
+- 注意 ！！ ： 在一个源文件中编写命名的类总是在一个包 中，如果源文件使用 import 语句引入另一个包中的类，并用该类创建了一个对象，那么该类的这个对象将不能访问直接的友好变量和友好方法 ！！
+
+#### 受保护的成员变量和方法：
+
+用 protected 修饰的成员变量和成员方法被称为受保护的成员变量和成员方法：
+- 基本用法和友好类一致 ，但其 子类 时有区别 ！“保护” 是为了保护子类
+
+##### public和友好类
+
+注意！：
+- 不能用 protected 和 private 修饰类
+- 访问限制符按访问权限 从高到低的顺序   public > protected > 友好类 > private
+- 类声明时，如果在关键字class前面加上个public 关键字，就称这样的类是一个public类
+ 
+
+### 基本类型的类封装 ：
+
+- java的基本数据类型包括 boolean ，byte,short,long,float 和 double 
+- java的基本数据类型相关的类 ： Byte Short Long Float Double Character
+
+
+##### Double 和 Float 类：
+- double 、 float
+#### Byte、Short、Integer、Long 类
+- byte short 、int 、long
+#### Character类
+- char
+
+![character](https://user-images.githubusercontent.com/68007558/156885743-db2c91d0-c5da-4271-8c7b-f0c2f330e677.jpg)
+
+
+### 对象数组：
+
+数组是相同类型变量按照顺序组成的集合
+- 如果程序想要student的10个对象 ，怎么办呢？
+```
+Student stu1,stu2,stu3,stu4,stu5,stu6,stu7,stu8,stu9,stu10; \\ 太麻烦不可取
+```
+- 正确的做法是使用对象数组 ,即数组的元素是对象：
+
+```
+Student [] stu;
+stu = new Student[10];
+```
+这样就定义的了一个对象数组了 ,里面有10个哦！
+
+定义好之后还是个空对象 所以使用它的时候就这样好了：
+```
+stu[0] = new Student(); //创建数组所包含的对象
+```
+### JRE 扩展和jar文件：
+JAVA运行环境为了扩展，只要将类打包为jar格式文件，放入扩展中，程序就可以使用import 语句室友扩展中的类呢
+- 该jar文件存放在JDK安装目录的 
+```
+jre\lib\ext\ 文件中
+```
+- 那些数据库的产商也都是打包成jar文件，丢在jre扩展中使用了
+
+操作方法 ： 省略（感觉不会考哈哈哈）
+
+### 文档生成器：
+ 使用 javadoc.exe 可以制作文本类结构 html文件 
+ ```
+ D:\test> javadoc example.java
+ ```
+ 
+ 
 
 ## 小结：
 
@@ -326,6 +471,7 @@ xxxx
 6. 通过对象的组合可以实现方法的复用
 7. 在编写JAVA源文件时，可以使用import语句引用有包名的类
 8. 对象访问自己的变量以及调用方法受访问权限的限制
+
 
 
  #  问答题：
