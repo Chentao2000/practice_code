@@ -1,8 +1,0 @@
-prefix=/home/tao/Desktop/TelloGO_IMAG/install
-
-Name: tello_control
-Description: Description of tello_control
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

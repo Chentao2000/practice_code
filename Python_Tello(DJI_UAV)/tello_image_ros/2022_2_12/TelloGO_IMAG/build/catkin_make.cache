@@ -1,2 +1,0 @@
-tello_control/tello_control
--DCATKIN_DEVEL_PREFIX=/home/tao/Desktop/TelloGO_IMAG/devel -DCMAKE_INSTALL_PREFIX=/home/tao/Desktop/TelloGO_IMAG/install -G Unix Makefiles
