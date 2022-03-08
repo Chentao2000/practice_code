@@ -26,21 +26,17 @@ PC类要求setCPU（CPU c）将参数c的值赋值给cpu，要求setHardDisk（H
 
 *******************************************************************************/
 
-public class Main {
-
-
-public static void main(String[] args) {
-    // TODO Auto-generated method stub
-    CPU cpu = new CPU ();
+public class Main{
+    public static void main(String[] args) {
+    CPU cpu=new CPU();
     cpu.speed=100;
-    HardDisk hardDisk =new HardDisk();
-    hardDisk.amount=100000000;
+    HardDisk hd=new HardDisk();
+    hd.amount=100;
     PC pc=new PC();
     pc.setCPU(cpu);
-    pc.setHardDisk(hardDisk);
+    pc.setHardDisk(hd);
     pc.show();
-
-}
+    }
 }
 
 
