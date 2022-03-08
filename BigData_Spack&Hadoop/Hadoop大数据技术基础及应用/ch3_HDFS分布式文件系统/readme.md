@@ -78,6 +78,9 @@ client将NameNode返回的分配的可写的DataNode列表和Data数据一同发
  
  
  ### 6. HDFS的HA(高可用)机制是什么？
+ 
+ -  通过多NameNode消除单点故障
 
 
+基本原理: 使用用2N+1台 JournalNode 存储EditLog，每次写数据操作有>=N+1返回成功时即认为该次写成功，保证数据不会丢失。
 
