@@ -20,17 +20,18 @@
         
         
 *******************************************************************************/
+
 import java.util.*;
 public class Main {
 	public static void main(String args[]) 
 	{
-		Scanner sc = new Scanner(System.in);
-		Complex c1 = new Complex(1, 2);
-		Complex c2 = new Complex(3, 4);
+	//	Scanner sc = new Scanner(System.in);
+		Complex c1 = new Complex(1, 28);
+		Complex c2 = new Complex(13, 4);
 		System.out.println(c1.toString());
 		System.out.println(c2.toString());
 		System.out.println(c1.complexAdd(c2).toString());
-		sc.close();
+	//	sc.close();
 	}
 }
 class Complex
@@ -49,10 +50,10 @@ class Complex
 	}
 	public Complex complexAdd(Complex a)
 	{
-	//	Complex b = new Complex(); b =  this
-		this.realPart = realPart + a.realPart;
-		this.imagInpart = imagInpart + a.imagInpart;
-		return this;
+		Complex b = new Complex(); 
+		b.realPart = realPart + a.realPart;
+		b.imagInpart = imagInpart + a.imagInpart;
+		return b;
 	}
 	public String toString()
 	{
