@@ -45,7 +45,17 @@ newff 是BP网络中最常用的函数，可以用于创建一个误差反向传
 - 旧版 省略
 
 
+## feedforwardnet - 创建一个BP网路：
+`
+  feedforwardnet(hiddenSzies,trainFcn)
+`
 
+- hiddenSizes 为隐含层的神经元节点个数，如果有多个隐含层，则hiddenSizes是一个行向量，默认值 为10；
+- trainFcn 为训练函数，默认值为' hrainln ' 
+- feedforwardnet 函数未确定输入层和输出层向量的维数，系统将这一步留给 train 函数完成，也可以使用configure函数手动配置
+- feedforwardnet 函数实现前向神经网络能够实现输入到输出函数的任意映射，用于拟合的函数 fitnet 和 用于 模式识别的函数 patterennet 均为 feedforwardnet 的不同版本
+
+- 使用默认的参数feedforwardnet 函数训练一个神经网络 ，观察网络的参数
 
 
 
