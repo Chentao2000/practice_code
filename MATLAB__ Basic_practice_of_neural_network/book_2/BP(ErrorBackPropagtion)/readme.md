@@ -60,16 +60,24 @@ newff 是BP网络中最常用的函数，可以用于创建一个误差反向传
 
 
 
+## 比较 cascadeforwardnet - 新版级联前向网络
+-  在级联BP 神经网络中，每一层除了接收上一层提供的出入外，还得到其他层提供的权值连接
+![1647485283(1)](https://user-images.githubusercontent.com/68007558/158726543-50b7d340-1836-4c42-8419-6561e4789970.jpg)
+
+
+### newffd  -   前反馈输入延迟的BP网络：
+- newffd 用于创建一个带输入延迟的网络， 函数语法如下
+`
+net = newfft(P,T,ID .....)
+`
+除了ID之外，newffd的参数大部分与newff函数相同，ID表示输入延迟的向量，默认为[0,1]
 
 
 
 
+### dlogsig/dtansig_Sigmoid函数的导数：
 
-
-
-
-
-
+....
 
 
 
