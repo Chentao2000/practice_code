@@ -6,7 +6,7 @@ A* : https://download.csdn.net/download/wangxin342201/11005863?username=Maker_pa
 
 matlab中( : , n)表示什么意思 ：
 
-- 取这一列的所有元素 如 ：
+- 取这一列的所有元素(对特定维度中的所有元素进行索引) 如 ：
 ```
   A = [1,2;2,4]
   A(:,2)
