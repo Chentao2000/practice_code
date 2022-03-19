@@ -1,0 +1,27 @@
+
+<!-- 学习日期: 2022 - 3 -18-->
+<launch>
+	<arg name="world" default="$(find prometheus_gazebo)/worlds/drl_worlds/orca.world"/>
+    <!-- 启动Gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world)"/>
+            <!-- $(arg world)" 这个地方应该是  gazebo的地图 -->
+    </include>
+   
+    <!-- Rviz config -->
+    <arg name="visualization" default="true"/>
+    <arg name="rivz_config" default="$(find orca)/launch/rviz_orca.rviz"/>
+
+	<!-- 启动Rviz-->
+	<group if="$(arg visualization)">
+        <node type="rviz" name="rviz" pkg="rviz" args="-d $(arg rivz_config)"/>
+                <!-- "rviz 的 地图-->
+    </group>
+
+	<arg name="swarm_num_ugv" default="3"/>
+    <!-- 启动 fake_odom_node -->
+    <node pkg="orca" type="orca_main_node" name="orca_main_node" output="screen">
+        <param name="swarm_num_ugv" value="$(arg swarm_num_ugv)"/>
+        <!-- "$(arg swarm_num_ugv)"  无人机的数量-->
+    </node>
+</launch>
