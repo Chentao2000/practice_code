@@ -1,0 +1,12 @@
+
+
+\mathbf{X} =
+\left (\begin{array}{ccc}
+
+\rho _1 &\rho_2  &\frac{\rho _3} {3} \\
+\rho _1 & 0 & \frac{\rho _3}{2} \\
+\rho _1 & \rho _2 &\frac{\rho_3}{2}\\
+0&0&-\rho + \rho _3  
+
+\end{array}
+\right )
