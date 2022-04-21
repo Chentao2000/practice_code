@@ -1,0 +1,8 @@
+% \nonumber 可以给公式画一个单独编号
+\begin{eqnarray}
+NU ^ + =\rho _1 + \rho_2 + \frac{\rho_3}{3} \nonumber  \\
+NU = \rho _1  + \frac{\rho_3}{2} \nonumber  \\
+NU^ -=- \rho _1 + \rho _2 + \frac{\rho_3}{2}  \nonumber \\
+NU^ {--} = - \rho_1 + \rho_3
+
+\end{eqnarray}
