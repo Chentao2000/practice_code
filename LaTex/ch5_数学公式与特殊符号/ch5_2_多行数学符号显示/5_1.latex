@@ -1,0 +1,10 @@
+\begin{align}
+\begin{aligned}
+%  \\ 换行符号 & 是对齐符号
+&NU^+ = \rho_1 + \rho_2 +\frac{\rho_3}{3} \\
+&NU=\rho _1+\frac{\rho _3}{2} \\
+&NU^- =-\rho _1 + \rho _2 + \frac{\rho _3}{2}\\
+&NU^{- -} =  -\rho _1 + \rho _3
+ 
+\end{aligned}
+\end{align}
