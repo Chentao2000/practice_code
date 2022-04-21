@@ -1,0 +1,16 @@
+
+
+\mathbf{X} =
+\left (\begin{array}{c|c|c}
+\rho _1 &\rho _2 & \frac{\rho _2}{3}  \\
+\hline
+\rho_1 & \rho_2 & \frac{\rho_3}{3} \\
+\hline 
+\rho _1 & \rho_2 & \frac{\rho_3}{3} \\
+\hline 
+0&0&-\rho _1 + \rho _3
+
+
+
+\end{array}
+\right )
